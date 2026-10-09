@@ -1,0 +1,82 @@
+# =============================================================================
+#  Haustelefon – zentrale Konfiguration / central configuration
+#
+#  Kopieren nach haustelefon.yaml, anpassen, dann:   ./setup.sh
+#  Copy to haustelefon.yaml, adjust, then run:      ./setup.sh
+#
+#  Aus dieser Datei erzeugt der Generator die komplette Asterisk-Konfiguration
+#  und für jedes Gerät einen Einrichtungscode für die App.
+# =============================================================================
+
+system:
+  # home   = Haushalt: Leitungen ohne "ring" klingeln auf allen Geräten.
+  # office = Büro: jede Leitung braucht eine "ring"-Angabe.
+  mode: home
+
+  # Speedport (oder anderer Router mit SIP-Registrar für IP-Telefone)
+  speedport_ip: 192.168.2.1
+  speedport_domain: speedport.ip
+
+  # Adresse, unter der die Apps diesen Server erreichen (LAN- oder VPN-IP).
+  server_host: 192.168.2.50
+  ws_port: 8088
+  rtp_ports: [10000, 10200]
+
+# -----------------------------------------------------------------------------
+#  Leitungen: eine Rufnummer = ein "IP-Telefon" im Speedport.
+#  Lines: one phone number = one "IP phone" registration on the router.
+#
+#  Speedport: Telefonie > Telefoniegeräte > IP-Telefon anlegen, dort pro
+#  Leitung NUR die eine ankommende Rufnummer und dieselbe abgehende wählen.
+# -----------------------------------------------------------------------------
+lines:
+  - id: privat
+    label: Privat
+    number: "+49 30 1111111"
+    speedport:
+      user: "**71"                    # "Nutzerkennung"
+      auth: "nutzer-1@speedport.ip"   # "Authentifizierungsname"
+      password: "CHANGE_ME"           # Passwort des IP-Telefons
+    ring: [handy, pc]                 # Geräte- oder Gruppen-IDs
+
+  - id: firma
+    label: Firma
+    number: "+49 30 2222222"
+    speedport:
+      user: "**72"
+      auth: "nutzer-2@speedport.ip"
+      password: "CHANGE_ME"
+    ring: [buero]
+
+# -----------------------------------------------------------------------------
+#  Geräte / Nebenstellen – jede App-Installation ist ein Gerät.
+#  Devices / extensions – every app installation is one device.
+# -----------------------------------------------------------------------------
+devices:
+  - id: handy                 # Benutzername für die App (a-z, 0-9, -)
+    name: Handy               # Anzeigename im Team-Verzeichnis
+    extension: 10             # interne Durchwahl
+    line: privat              # Standard-Leitung für ausgehende Anrufe
+    lines: [privat, firma]    # erlaubte ausgehende Leitungen (weglassen = alle)
+    password: auto            # auto = sicheres Passwort erzeugen (secrets.yaml)
+
+  - id: pc
+    name: Büro-PC
+    extension: 11
+    line: firma
+
+  - id: anna
+    name: Anna (Empfang)
+    extension: 12
+    line: firma
+    lines: [firma]
+
+# -----------------------------------------------------------------------------
+#  Gruppen: klingeln auf allen Mitgliedern gleichzeitig, eigene Durchwahl.
+#  Groups: ring all members at once, with their own extension.
+# -----------------------------------------------------------------------------
+groups:
+  - id: buero
+    name: Büro
+    extension: 20
+    members: [pc, anna]

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Haustelefon</string>
+    <string name="channel_keepalive">Reachability</string>
+    <string name="channel_keepalive_desc">Keeps the connection to your phone system open</string>
+    <string name="channel_incoming">Incoming calls</string>
+    <string name="channel_incoming_desc">Rings for incoming calls</string>
+    <string name="channel_missed">Missed calls</string>
+</resources>

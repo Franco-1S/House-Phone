@@ -1,0 +1,16 @@
+# Haustelefon – Asterisk-Server. Wird von ./setup.sh gestartet.
+# Die Konfiguration erzeugt ./setup.sh aus haustelefon.yaml nach generated/asterisk/.
+services:
+  asterisk:
+    image: andrius/asterisk:latest
+    container_name: haustelefon-asterisk
+    # Host-Netz: SIP, WebSocket und RTP direkt auf den Schnittstellen des
+    # Rechners (LAN + VPN) – kein NAT, keine Portweiterleitungen nötig.
+    network_mode: host
+    restart: unless-stopped
+    volumes:
+      - ./generated/asterisk/pjsip.conf:/etc/asterisk/pjsip.conf:ro
+      - ./generated/asterisk/extensions.conf:/etc/asterisk/extensions.conf:ro
+      - ./generated/asterisk/http.conf:/etc/asterisk/http.conf:ro
+      - ./generated/asterisk/rtp.conf:/etc/asterisk/rtp.conf:ro
+      - ./generated/asterisk/modules.conf:/etc/asterisk/modules.conf:ro

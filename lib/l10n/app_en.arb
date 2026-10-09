@@ -1,0 +1,342 @@
+{
+  "@@locale": "en",
+  "addContact": "Add contact",
+  "addNumber": "Add number",
+  "appTitle": "Haustelefon",
+  "atLeastOneNumber": "At least one number",
+  "audio": "Audio",
+  "audioAndRingtone": "Audio & ringtone",
+  "audioCardSubtitle": "Microphone, speaker, volume, ringtone",
+  "authName": "Authentication name",
+  "authNameHint": "e.g. nutzer-1@speedport.ip",
+  "authUserHint": "empty = username",
+  "authUserOptional": "Auth user (optional)",
+  "autostart": "Start with Windows",
+  "autostartHint": "Starts hidden in the notification area",
+  "back": "Back",
+  "btnAnswer": "Answer",
+  "btnAudio": "Audio",
+  "btnDecline": "Decline",
+  "btnHold": "Hold",
+  "btnKeypad": "Keypad",
+  "btnMute": "Mute",
+  "btnResume": "Resume",
+  "btnSpeaker": "Speaker",
+  "callDialing": "Dialling",
+  "callHistory": "Call history",
+  "callIncoming": "Incoming call",
+  "callOnHold": "On hold",
+  "callRemoteHold": "Held by the other party",
+  "callRinging": "Ringing",
+  "callVia": "Call via",
+  "callVolume": "Call volume",
+  "cancel": "Cancel",
+  "changesSaved": "Changes saved",
+  "clear": "Clear",
+  "clearHistoryBody": "All entries will be deleted from this device.",
+  "clearHistoryTitle": "Clear call history?",
+  "clearList": "Clear list",
+  "closeToTray": "Keep running in the notification area",
+  "closeToTrayHint": "Closing the window keeps you reachable for calls",
+  "connectionType": "Connection type",
+  "contactDeleted": "{name} deleted",
+  "@contactDeleted": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "contactSaved": "{name} saved",
+  "@contactSaved": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "contacts": "Contacts",
+  "contactsEmptyBody": "Add your first contact.",
+  "contactsEmptyTitle": "No contacts yet",
+  "credentials": "Credentials",
+  "defaultLabel": "Default",
+  "delete": "Delete",
+  "deleteContactBody": "The contact will be removed from this device.",
+  "deleteContactTitle": "Delete {name}?",
+  "@deleteContactTitle": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "detailAuthRejected": "Username or password rejected",
+  "detailConnecting": "Establishing connection …",
+  "detailDisconnected": "Disconnected",
+  "detailNoAnswer": "No answer from {host} – is the VPN on and the address correct?",
+  "@detailNoAnswer": {
+    "placeholders": {
+      "host": {
+        "type": "String"
+      }
+    }
+  },
+  "detailNotFound": "Unknown extension (404)",
+  "detailReady": "Ready for calls",
+  "detailRegistering": "Registering with {host} …",
+  "@detailRegistering": {
+    "placeholders": {
+      "host": {
+        "type": "String"
+      }
+    }
+  },
+  "detailRetrying": "retrying automatically",
+  "detailSetupHint": "Tap the gear icon to set up your extension.",
+  "detailStartFailed": "Start failed: {error}",
+  "@detailStartFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "detailStarting": "Starting …",
+  "detailTimeout": "Timed out – check VPN/address",
+  "detailUnreachable": "Server unreachable – is the VPN on?",
+  "detailUnregistered": "Signed out",
+  "directionIncoming": "incoming",
+  "directionOutgoing": "outgoing",
+  "displayNameHint": "e.g. Phone",
+  "displayNameOptional": "Display name (optional)",
+  "edit": "Edit",
+  "editContact": "Edit contact",
+  "endBusy": "Busy",
+  "endCanceled": "Cancelled",
+  "endConnectionLost": "Connection lost",
+  "endDeclined": "Declined",
+  "endEnded": "Call ended",
+  "endFailed": "Failed ({code})",
+  "@endFailed": {
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
+  },
+  "endIncompatible": "Audio incompatible – gateway required (see guide)",
+  "endIncomplete": "Incomplete number",
+  "endMissed": "Missed call",
+  "endNoAnswer": "No answer",
+  "endNoMicrophone": "No microphone access",
+  "endNotConnected": "Not connected to the phone system",
+  "endNotFound": "Number not found",
+  "endRejected": "Call declined",
+  "endRtpTimeout": "No more audio received",
+  "endUnauthorized": "Not authorised",
+  "endUnavailable": "Not reachable",
+  "enterNumber": "Enter number",
+  "extensionLabel": "Extension {ext}",
+  "@extensionLabel": {
+    "placeholders": {
+      "ext": {
+        "type": "String"
+      }
+    }
+  },
+  "extensionTitle": "Extension",
+  "favorite": "Favourite",
+  "favoriteHint": "Shown at the top of your contacts",
+  "filterAll": "All",
+  "filterMissed": "Missed",
+  "filterMissedCount": "Missed ({count})",
+  "@filterMissedCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "groupExtension": "Group · extension {ext}",
+  "@groupExtension": {
+    "placeholders": {
+      "ext": {
+        "type": "String"
+      }
+    }
+  },
+  "hearMyself": "Hear myself",
+  "hearMyselfHint": "Also tests the speaker – headphones recommended",
+  "historyEmptyBody": "Your calls will show up here.",
+  "historyEmptyMissedBody": "Every call was answered.",
+  "historyEmptyMissedTitle": "Nothing missed",
+  "historyEmptyTitle": "No calls yet",
+  "invalidPort": "Invalid port",
+  "labelInternal": "Internal",
+  "labelLandline": "Landline",
+  "labelMobile": "Mobile",
+  "labelOther": "Other",
+  "labelWork": "Work",
+  "language": "Language",
+  "languageSystem": "System",
+  "logCanceled": "Cancelled",
+  "logDeclined": "Declined",
+  "logIncoming": "Incoming · {duration}",
+  "@logIncoming": {
+    "placeholders": {
+      "duration": {
+        "type": "String"
+      }
+    }
+  },
+  "logMissed": "Missed",
+  "logNotReached": "Not reached",
+  "logOutgoing": "Outgoing · {duration}",
+  "@logOutgoing": {
+    "placeholders": {
+      "duration": {
+        "type": "String"
+      }
+    }
+  },
+  "makeFavorite": "Favourite",
+  "manualSetup": "Set up manually",
+  "manualSetupHint": "Enter server address, user and password yourself.",
+  "micOpenFailed": "Could not open the microphone.",
+  "microphone": "Microphone",
+  "name": "Name",
+  "nameRequired": "Please enter a name",
+  "newContact": "New contact",
+  "noMatch": "No match",
+  "notConnectedCopied": "Not connected – number copied to the dialer",
+  "notDuringCall": "Not available during a call.",
+  "notifIncomingTitle": "Incoming call",
+  "notifMissedTitle": "Missed call",
+  "notifReachableAs": "Reachable as {identity}",
+  "@notifReachableAs": {
+    "placeholders": {
+      "identity": {
+        "type": "String"
+      }
+    }
+  },
+  "notifReachableTitle": "Haustelefon is reachable",
+  "numberType": "Number type",
+  "onLine": "on {line}",
+  "@onLine": {
+    "placeholders": {
+      "line": {
+        "type": "String"
+      }
+    }
+  },
+  "outgoingNumber": "Outgoing number",
+  "password": "Password",
+  "paste": "Paste",
+  "pasteSetupCode": "Paste setup code",
+  "pasteSetupCodeHint": "Everything automatic – code from the server (./setup.sh codes)",
+  "phoneNumbers": "Phone numbers",
+  "reconnect": "Reconnect",
+  "redial": "Redial: {number}",
+  "@redial": {
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
+  },
+  "registrar": "Registrar (router)",
+  "registrarHint": "speedport.ip or 192.168.2.1",
+  "required": "Required",
+  "rescanDevices": "Search devices again",
+  "ringVolume": "Ring volume",
+  "ringtone": "Ringtone",
+  "ringtoneClassic": "Classic",
+  "ringtoneDigital": "Digital",
+  "ringtoneHintMobile": "On phones the system notification rings.",
+  "ringtoneHintWindows": "The ringtone plays on the Windows default device. For incoming calls the app also comes to the front and flashes the taskbar.",
+  "ringtoneOff": "Off",
+  "ringtoneSoft": "Soft",
+  "save": "Save",
+  "saveAndConnect": "Save & connect",
+  "saveAsContact": "Save as contact",
+  "savedConnecting": "Saved – connecting to the phone system …",
+  "savedInstantly": "Changes are saved immediately.",
+  "searchContacts": "Search name or number",
+  "searchingDevices": "Searching devices …",
+  "server": "Server",
+  "setUp": "Set up",
+  "settings": "Settings",
+  "settingsPc": "PC",
+  "setupCardSubtitle": "Enter server, user & password",
+  "setupCardTitle": "Set up extension",
+  "setupCodeChoiceHint": "The server creates the code (./setup.sh codes). Recommended – everything is configured automatically.",
+  "setupDoneDevice": "Set up: {name} · extension {ext}",
+  "@setupDoneDevice": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "ext": {
+        "type": "String"
+      }
+    }
+  },
+  "setupDoneUser": "Set up as {user}",
+  "@setupDoneUser": {
+    "placeholders": {
+      "user": {
+        "type": "String"
+      }
+    }
+  },
+  "setupInvalidCode": "This is not a valid setup code – please copy it completely.",
+  "showContact": "Show contact",
+  "sipDomain": "SIP domain (server IP)",
+  "sipPort": "SIP port (TCP)",
+  "speakerHeadphones": "Speaker / headphones",
+  "statusConnecting": "Connecting …",
+  "statusFailed": "Error",
+  "statusOffline": "Not connected",
+  "statusRegistered": "Registered",
+  "statusUnconfigured": "Not set up",
+  "stopTest": "Stop test",
+  "systemDefaultDevice": "System default device",
+  "team": "Team",
+  "testMicrophone": "Test microphone",
+  "today": "Today",
+  "transportTcp": "Direct (TCP)",
+  "transportTcpHint": "Experimental. Registers directly with the router via SIP/TCP. Calls usually fail because WebRTC requires encrypted audio (DTLS-SRTP) that routers like the Speedport do not support.",
+  "transportWs": "Server (WS)",
+  "transportWsHint": "Recommended. The app talks WebRTC to the Haustelefon server (Asterisk), which is registered with your router as an IP phone.",
+  "trayHiddenText": "You stay reachable. Quit from the icon in the notification area.",
+  "trayHiddenTitle": "Haustelefon keeps running",
+  "trayOpen": "Open",
+  "trayQuit": "Quit",
+  "unknownCaller": "Unknown",
+  "unnamedDevice": "Unnamed device",
+  "userId": "User ID",
+  "userIdHint": "e.g. **71",
+  "usernameGateway": "Username (server)",
+  "viaLine": "via {line}",
+  "@viaLine": {
+    "placeholders": {
+      "line": {
+        "type": "String"
+      }
+    }
+  },
+  "weekday": "{day, select, 1{Monday} 2{Tuesday} 3{Wednesday} 4{Thursday} 5{Friday} 6{Saturday} other{Sunday}}",
+  "@weekday": {
+    "placeholders": {
+      "day": {
+        "type": "String"
+      }
+    }
+  },
+  "welcomeBody": "Connect this device to your phone system.",
+  "welcomeTitle": "Welcome to Haustelefon",
+  "wsUrl": "WebSocket URL",
+  "wsUrlInvalid": "e.g. ws://192.168.2.50:8088/ws",
+  "yesterday": "Yesterday"
+}

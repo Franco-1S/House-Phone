@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Haustelefon</string>
+    <string name="channel_keepalive">Erreichbarkeit</string>
+    <string name="channel_keepalive_desc">Hält die Verbindung zur Telefonanlage offen</string>
+    <string name="channel_incoming">Eingehende Anrufe</string>
+    <string name="channel_incoming_desc">Klingeln bei eingehenden Anrufen</string>
+    <string name="channel_missed">Verpasste Anrufe</string>
+</resources>
