@@ -3,7 +3,7 @@
 # Haustelefon
 
 **Self-hosted softphone & phone system for home and small office.**
-Flutter app for Android, iOS and Windows + an Asterisk server generated from one YAML file.
+Flutter app for Android, iOS, Windows and Linux + an Asterisk server generated from one YAML file.
 
 [Deutsch](README.de.md) · [Architecture](docs/ARCHITECTURE.md) · [Changelog](CHANGELOG.md)
 
@@ -40,6 +40,8 @@ phone or PC, an internal extension, and the right calls ring on the right device
 - **Windows** – runs in the notification area (stays reachable when the window
   is closed), optional start with Windows, keyboard control, audio device
   selection, microphone test, ringtones, taskbar flashing, one-click installer.
+- **Linux** – the same desktop app (GTK): icon in the panel, start on login,
+  ringtone via PipeWire/PulseAudio, `.deb` package.
 
 ## How it works
 
@@ -111,6 +113,7 @@ device's code. To reach the server from outside your home, use a VPN
 |---|---|
 | `Haustelefon-<version>-android.apk` | Open on the phone, allow "install unknown apps" |
 | `Haustelefon-<version>-windows-x64.zip` | Unzip, double-click `Install.cmd` – no admin rights needed |
+| `Haustelefon-<version>-linux-amd64.deb` | Double-click or `sudo apt install ./Haustelefon-*.deb` (Ubuntu 22.04+, Debian 12+, Linux Mint 21+) |
 | `Haustelefon-<version>-server.zip` | Unzip on the Raspberry Pi / server, continue with step 2 (`cd haustelefon-server`) |
 
 **Building it yourself:**
@@ -119,7 +122,11 @@ device's code. To reach the server from outside your home, use a VPN
 |---|---|---|
 | Android | `flutter build apk --release` | Background service keeps the app reachable |
 | Windows | double-click `Haustelefon-installieren.bat` | Builds, installs, creates shortcuts; no Developer Mode needed |
+| Linux | `sudo apt install clang cmake ninja-build pkg-config libgtk-3-dev libsecret-1-dev libjsoncpp-dev libpulse-dev`, then `flutter build linux --release` | Bundle in `build/linux/x64/release/bundle`; panel icon needs `libayatana-appindicator3-1` at runtime |
 | iOS | `flutter build ios` on a Mac | Reachable while open (see limitations) |
+
+The Linux `.deb` is built by GitHub Actions: publishing a release runs
+`.github/workflows/release.yml`, which attaches the package to the release.
 
 Android release signing: put `storeFile`, `storePassword`, `keyAlias` and
 `keyPassword` into `android/key.properties` (git-ignored). Without it, the
@@ -129,6 +136,9 @@ release build is signed with the debug key.
 
 - **SMS** over landline numbers is not possible: Telekom and Vodafone shut down
   landline SMS in March 2023.
+- **Linux panel icon**: needs libayatana-appindicator3; on GNOME (Fedora,
+  Debian) additionally the *AppIndicator* extension. Without it, closing the
+  window quits the app – starting it again always brings back the running window.
 - **iOS background**: iOS closes network connections of background apps. Ringing
   while the app is closed would need PushKit/CallKit plus a push service.
 - Tested with the Telekom Speedport Smart 4. Other routers with a built-in SIP
@@ -142,6 +152,7 @@ release build is signed with the debug key.
 | “Username or password rejected” | Re-paste the setup code; check `./setup.sh codes` |
 | Call connects but no audio | UDP 10000–10200 to the server blocked (firewall/VPN `AllowedIPs`) |
 | Line shows `Rejected` in `./setup.sh status` | Router credentials wrong; some Speedports want the auth name without `@speedport.ip` |
+| Linux: no icon in the panel | `sudo apt install libayatana-appindicator3-1`; on GNOME also enable the *AppIndicator* extension |
 | Live Asterisk log | `docker exec -it haustelefon-asterisk asterisk -rvvv` |
 
 ## Development
